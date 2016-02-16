@@ -1,4 +1,6 @@
 ---
+server.port: 8200
+
 eureka:
   client:
     serviceUrl:
