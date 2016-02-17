@@ -1,11 +1,30 @@
-server:
-  port: 8100
+---
+spring.profiles: primary
+server.port: 8100
 
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    useDnsForFetchingServiceUrls: false
     serviceUrl:
-      defaultZone: http://localhost:8100/eureka/
+      defaultZone: http://local.primary.eureka:8100/eureka/
+  instance:
+    hostname: local.primary.eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+---
+spring.profiles: secondary
+server.port: 8200
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    useDnsForFetchingServiceUrls: false
+    serviceUrl:
+      defaultZone: http://local.secondary.eureka:8100/eureka/
+  instance:
+    hostname: local.secondary.eureka
   server:
     waitTimeInMsWhenSyncEmpty: 0
