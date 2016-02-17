@@ -4,7 +4,7 @@ server.port: 8100
 
 eureka:
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
     useDnsForFetchingServiceUrls: false
     serviceUrl:
@@ -19,7 +19,7 @@ server.port: 8200
 
 eureka:
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
     useDnsForFetchingServiceUrls: false
     serviceUrl:
