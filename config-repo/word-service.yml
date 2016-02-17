@@ -1,10 +1,10 @@
 ---
 server:
-  port: 8200
+  port: 8300
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8100/eureka/
+      defaultZone: http://local.primary.eureka:8100/eureka/,http://local.secondary.eureka:8200/eureka/
 
 words: reasonable,leaky,suspicious,ordinary,unlikely
