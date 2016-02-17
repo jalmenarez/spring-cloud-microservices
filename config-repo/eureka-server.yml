@@ -8,7 +8,7 @@ eureka:
     fetchRegistry: false
     useDnsForFetchingServiceUrls: false
     serviceUrl:
-      defaultZone: http://local.primary.eureka:8100/eureka/
+      defaultZone: http://local.secondary.eureka:8200/eureka/
   instance:
     hostname: local.primary.eureka
   server:
