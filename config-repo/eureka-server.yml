@@ -6,9 +6,9 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-    useDnsForFetchingServiceUrls: false
+    useDnsForFetchingServiceUrls: true
     serviceUrl:
-      defaultZone: http://local.secondary.eureka:8200/eureka/
+      defaultZone: http://local.primary.eureka:8100/eureka/,http://local.secondary.eureka:8200/eureka/
   instance:
     hostname: local.primary.eureka
   server:
@@ -21,9 +21,9 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-    useDnsForFetchingServiceUrls: false
+    useDnsForFetchingServiceUrls: true
     serviceUrl:
-      defaultZone: http://local.primary.eureka:8100/eureka/
+      defaultZone: http://local.secondary.eureka:8200/eureka/,http://local.primary.eureka:8100/eureka/
   instance:
     hostname: local.secondary.eureka
   server:
