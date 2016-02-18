@@ -6,5 +6,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://local.primary.eureka:8100/eureka/,http://local.secondary.eureka:8200/eureka/
+  instance:
+    hostname: localhost
 
 words: reasonable,leaky,suspicious,ordinary,unlikely
