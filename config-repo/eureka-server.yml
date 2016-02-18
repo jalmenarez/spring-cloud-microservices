@@ -5,12 +5,11 @@ server.port: 8100
 eureka:
   client:
     registerWithEureka: true
-    fetchRegistry: false
-    useDnsForFetchingServiceUrls: false
+    fetchRegistry: true
+    useDnsForFetchingServiceUrls: true
     serviceUrl:
-      defaultZone: http://local.primary.eureka:8100/eureka/,http://local.secondary.eureka:8200/eureka/
-  instance:
-    hostname: local.primary.eureka
+      defaultZone: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/eureka/
+    hostname: ec2-52-36-235-26.us-west-2.compute.amazonaws.com
   server:
     waitTimeInMsWhenSyncEmpty: 0
 ---
@@ -20,10 +19,10 @@ server.port: 8200
 eureka:
   client:
     registerWithEureka: true
-    fetchRegistry: false
+    fetchRegistry: true
     useDnsForFetchingServiceUrls: false
     serviceUrl:
-      defaultZone: http://local.secondary.eureka:8200/eureka/,http://local.primary.eureka:8100/eureka/
+      defaultZone: http://local.secondary.eureka:8200/eureka/,http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/eureka/
   instance:
     hostname: local.secondary.eureka
   server:
