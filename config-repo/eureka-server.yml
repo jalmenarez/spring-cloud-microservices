@@ -15,7 +15,6 @@ eureka:
       defaultZone: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/eureka/
   instance:
     hostname: ec2-52-36-235-26.us-west-2.compute.amazonaws.com
-    ipAddress: 172.31.43.106
     statusPageUrl: http://${eureka.instance.hostname}:${server.port}/info
     healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/health
     preferIpAddress: true
