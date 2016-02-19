@@ -5,6 +5,8 @@ server.port: 8100
 endpoints:
   restart:
     enabled: true
+  info:
+    sensitive: true
 
 eureka:
   client:
