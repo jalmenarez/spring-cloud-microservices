@@ -16,7 +16,7 @@ eureka:
   instance:
     hostname: ec2-52-36-235-26.us-west-2.compute.amazonaws.com
     ipAddress: 52.36.235.26
-    dataCenterInfo: Amazon
+    dataCenterInfo: cloud
   server:
     waitTimeInMsWhenSyncEmpty: 0
 ---
