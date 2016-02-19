@@ -15,8 +15,8 @@ eureka:
       defaultZone: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/eureka/
   instance:
     hostname: ec2-52-36-235-26.us-west-2.compute.amazonaws.com
-    statusPageUrl: http://${eureka.instance.hostname}:${server.port}/info
-    healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/health
+    statusPageUrl: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/info
+    healthCheckUrl: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/health
     preferIpAddress: true
   server:
     waitTimeInMsWhenSyncEmpty: 0
