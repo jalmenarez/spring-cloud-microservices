@@ -6,7 +6,7 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    useDnsForFetchingServiceUrls: true
+    useDnsForFetchingServiceUrls: false
     serviceUrl:
       defaultZone: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/eureka/
     hostname: ec2-52-36-235-26.us-west-2.compute.amazonaws.com
