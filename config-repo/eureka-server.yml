@@ -2,6 +2,10 @@
 spring.profiles: primary
 server.port: 8100
 
+endpoints:
+  restart:
+    enabled: true
+
 eureka:
   client:
     registerWithEureka: true
