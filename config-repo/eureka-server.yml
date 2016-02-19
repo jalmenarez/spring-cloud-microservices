@@ -9,7 +9,9 @@ eureka:
     useDnsForFetchingServiceUrls: false
     serviceUrl:
       defaultZone: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8100/eureka/
+  instance:
     hostname: ec2-52-36-235-26.us-west-2.compute.amazonaws.com
+    ipAddress: 52.36.235.26
   server:
     waitTimeInMsWhenSyncEmpty: 0
 ---
