@@ -9,3 +9,7 @@ spring:
           searchPaths: config-repo
 
 server.port: 8000
+
+endpoints:
+  restart:
+    enabled: true
