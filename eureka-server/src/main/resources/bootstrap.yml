@@ -1,6 +1,8 @@
 spring:
+  profiles:
+    active: primary
   application:
     name: eureka-server
   cloud:
     config:
-      uri: http://localhost:8000
+      uri: http://ec2-52-36-235-26.us-west-2.compute.amazonaws.com:8000
