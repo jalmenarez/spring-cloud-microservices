@@ -1,4 +1,7 @@
+---
 spring:
+  profiles:
+    active: local
   application:
     name: config-server
   cloud:
@@ -13,3 +16,40 @@ server.port: 8000
 endpoints:
   restart:
     enabled: true
+---
+spring:
+  profiles: local
+  
+info:
+  datacenter: local
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+  build:
+    groupId: "@project.groupId@"
+    artifactId: "@project.artifactId@"
+    version: "@project.version@"
+
+logging:
+  level: 
+    root: INFO
+  path: /
+---
+spring:
+  profiles: cloud
+
+info:
+  datacenter: Amazon
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+  build:
+    groupId: "@project.groupId@"
+    artifactId: "@project.artifactId@"
+    version: "@project.version@"
+
+logging:
+  level: 
+    root: WARN
+    org.springframework.web: DEBUG
+  path: /var/log/microservices
