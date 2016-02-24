@@ -1,4 +1,23 @@
 ---
+spring.profiles: local
+server.port: 8100
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    useDnsForFetchingServiceUrls: false
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+    hostname: localhost
+    statusPageUrl: http://localhost:8100/info
+    healthCheckUrl: http://localhost:8100/health
+    preferIpAddress: true
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+---
 spring.profiles: primary
 server.port: 8100
 
